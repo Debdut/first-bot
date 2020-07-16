@@ -1,0 +1,33 @@
+{
+  "name": "first-bot",
+  "version": "0.0.0",
+  "description": "The Bot Search Engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js",
+    "mock": "json-server --port 1729 --watch mock.db/index.json",
+    "start:mock": "concurrently \"npm run mock\" \"npm start\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirana-stores/first-bot.git"
+  },
+  "author": "Debdut Karmakar <iawaiponly@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kirana-stores/first-bot/issues"
+  },
+  "homepage": "https://github.com/kirana-stores/first-bot#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "url-request": "^1.0.9"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "json-server": "^0.16.1",
+    "mocha": "^8.0.1"
+  }
+}
