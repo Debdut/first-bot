@@ -3,7 +3,7 @@ const bodyParser = require('body-parser')
 const request = require('request')
 
 const config = require('./config')
-// const { handleMessage, handlePostback } = require('./handlers')
+const Handler = require('./handlers')
 
 const app = express()
 
@@ -39,13 +39,10 @@ app.post(config.WEBHOOK, (req, res) => {
     body.entry.forEach(entry => {
       const webhookEvent = entry.messaging[0]
       const senderId = webhookEvent.sender.id
-
-      console.log(`Sender PSID - ${senderId}`)
-
       if (webhookEvent.message) {
-        handleMessage(senderId, webhookEvent.message)
+        Handler.Message(senderId, webhookEvent.message)
       } else if (webhookEvent.postback) {
-        handlePostback(senderId, webhookEvent.postback)
+        Handler.Postback(senderId, webhookEvent.postback)
       }
     })
     res
@@ -59,11 +56,3 @@ app.post(config.WEBHOOK, (req, res) => {
 app.listen(config.PORT, () => {
   console.log(`Listening at port ${config.PORT}`)
 })
-
-function handleMessage (id, message) {
-  console.log(id, message)
-}
-
-function handlePostback (id, postback) {
-  console.log(id, postback)
-}
