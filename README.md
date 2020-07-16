@@ -1,5 +1,5 @@
 # First Bot
 
-The Bot Search Engine
+> _The Bot Search Engine_
 
-[logo]: https://github.com/kirana-stores/first-bot/raw/master/assets/first-bot.png
+![Logo](/assets/first-bot.png)
