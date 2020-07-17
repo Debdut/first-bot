@@ -1,12 +1,11 @@
-const GraphApi = require('../graph-api')
+const config = require('../config')
+const GraphApi = require('../graph-api')(config)
+const { removeNull } = require('../util')
 
 class Message {
   constructor(messaging_type) {
     this.messaging_type = messaging_type
-  }
-  
-  get message() {
-    return this.message
+    this.message = {}
   }
 
   send (recipient) {

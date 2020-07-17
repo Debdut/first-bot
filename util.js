@@ -121,10 +121,33 @@ const pick = (obj, props, target, nullify = false) => {
 	}
 }
 
+const pickCheck = (obj, must, optional) => {
+	const clone = {}
+	for (let index = 0; index < must.length; index++) {
+		const key = must[index]
+		const val = obj[key]
+		if (val) {
+			clone[key] = val
+		} else {
+			console.log(key, val)
+			return null
+		}
+	}
+	for (let index = 0; index < optional.length; index++) {
+		const key = optional[index]
+		const val = obj[key]
+		if (val) {
+			clone[key] = val
+		}
+	}
+	return clone
+}
+
 module.exports = {
   camelCase,
   caps,
 	stringifyProps,
 	removeNull,
-	pick
+	pick,
+	pickCheck
 }

@@ -15,7 +15,7 @@ class QuickReply extends Message {
 
   addQuickReply (content_type, title, payload, image_url) {
     this.message.quick_replies
-      .push({ content_type, title, payload, image })
+      .push({ content_type, title, payload, image_url })
   }
 
   setlocationReply () {

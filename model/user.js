@@ -18,7 +18,7 @@ user object {
 */
 class User extends Model {
   constructor(user) {
-    super('users')
+    super('user')
     pick(user, [ 'first_name', 'last_name', 'gender', 'locale', 'timezone', 'id', 'profile_pic', 'phone', 'email' ], this, true)
 
     this.messenger_id = this.id
@@ -26,6 +26,4 @@ class User extends Model {
   }
 }
 
-const user = new User({ first_name: 'Debdut', last_name: 'Karmakar', gender: 'male', locale: 'en-US', timezone: -5, id: 28123, profile_pic: null, lazy: true })
-
-user.write()
+module.exports = User

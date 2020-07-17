@@ -1,8 +1,9 @@
 const express = require('express')
 const bodyParser = require('body-parser')
-const request = require('request')
 
 const config = require('./config')
+const { pickCheck } = require('./util')
+const Bot = require('./model/bot')
 const Handler = require('./handlers')
 
 const app = express()
@@ -50,6 +51,29 @@ app.post(config.WEBHOOK, (req, res) => {
       .send('EVENT_RECEIVED')
   } else {
     res.sendStatus(404)
+  }
+})
+
+app.post('/bot', async (req, res) => {
+  let body = req.body
+  let bot = pickCheck(body, ['title', 'description', 'image_url', 'messenger_url'], ['website', 'email', 'name', 'phone'])
+  if (bot) {
+    bot = new Bot(bot)
+    try {
+      await bot.write()
+    } catch (error) {
+      res
+        .status(500)
+        .send('SERVER ERROR! TRY IN SOME TIME')
+      return
+    }
+    res
+      .status(200)
+      .json({ success: true, id: bot.id })
+  } else {
+    res
+      .status(403)
+      .send('INCORRECT SCHEMA')
   }
 })
 

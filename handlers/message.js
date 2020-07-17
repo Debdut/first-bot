@@ -1,3 +1,3 @@
-const handleMessage = (id, message) => ()
+const handleMessage = (id, message) => {}
 
 module.exports = handleMessage

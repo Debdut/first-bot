@@ -6,8 +6,10 @@ class Model  {
   }
 
   write() {
-    db.get(this.__proto__.type)
+    db.get(`${this.__proto__.type}s`)
       .push(this)
+      .write()
+    db.update(`${this.__proto__.type}_count`, n => n+1)
       .write()
   }
 }

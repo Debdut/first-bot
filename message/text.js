@@ -2,7 +2,8 @@ const Message = require('./message')
 
 class Text extends Message {
   constructor (text) {
-    this.message = { text }
+    super()
+    this.message.text = text
   }
 }
 
