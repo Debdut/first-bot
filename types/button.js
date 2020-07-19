@@ -12,7 +12,7 @@ class Url extends Button {
   }
 }
 
-class PostBack extends Button {
+class Postback extends Button {
   constructor (title, payload) {
     super('postback')
     this.title = title
@@ -54,4 +54,4 @@ class Game extends Button {
   }
 }
 
-module.exports = { Url, PostBack, Call, LogIn, LogOut, Game }
+module.exports = { Url, Postback, Call, LogIn, LogOut, Game }

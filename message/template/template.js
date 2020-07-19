@@ -2,6 +2,7 @@ const Message = require('../message')
 
 class Template extends Message {
   constructor (template_type) {
+    super()
     this.message = {
       attachment: {
         type: 'template',

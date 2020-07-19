@@ -1,6 +1,128 @@
 {
-  "bots": [],
-  "users": [],
-  "bot_count": 1,
-  "user_count": 13
+  "bots": [
+    {
+      "title": "First Bot",
+      "description": "The Bot Search Engine",
+      "image_url": "https://via.placeholder.com/200x100?text=FirstBot",
+      "messenger_url": "https://m.me/zelf.co",
+      "name": "Debdut",
+      "id": "b113edf6-a329-4d06-9d4a-f51b89e4a98d",
+      "category": "Search",
+      "upvotes": 25
+    },
+    {
+      "title": "First Bot",
+      "description": "The Bot Search Engine",
+      "image_url": "https://via.placeholder.com/200x100?text=FirstBot",
+      "messenger_url": "https://m.me/100183578449878",
+      "name": "Debdut",
+      "id": "f5872dfd-578e-4728-ab60-7cd9539ac5ee",
+      "category": "Finance",
+      "upvotes": 19
+    },
+    {
+      "title": "First Bot",
+      "description": "The Bot Search Engine",
+      "image_url": "https://via.placeholder.com/200x100?text=FirstBot",
+      "messenger_url": "https://m.me/100183578449878",
+      "name": "Debdut",
+      "id": "0c7efd6b-1a64-4553-a328-c08fe55ce16c",
+      "category": "Search",
+      "upvotes": 15
+    },
+    {
+      "title": "First Bot",
+      "description": "The Bot Search Engine",
+      "image_url": "https://via.placeholder.com/200x100?text=FirstBot",
+      "messenger_url": "https://m.me/100183578449878",
+      "name": "Debdut",
+      "id": "5b819a6f-8282-4951-adf4-9729a3739a15",
+      "category": "Finance",
+      "upvotes": 10
+    },
+    {
+      "title": "First Bot",
+      "description": "The Bot Search Engine",
+      "image_url": "https://via.placeholder.com/200x100?text=FirstBot",
+      "messenger_url": "https://m.me/100183578449878",
+      "name": "Debdut",
+      "id": "3c3e3ed6-82b4-4176-a0f8-a18e99aab370",
+      "category": "Ecommerce",
+      "upvotes": 3
+    },
+    {
+      "title": "First Bot",
+      "description": "The Bot Search Engine",
+      "image_url": "https://via.placeholder.com/200x100?text=FirstBot",
+      "messenger_url": "https://m.me/100183578449878",
+      "name": "Debdut",
+      "id": "9b868490-a060-4351-a1bd-769923a99919",
+      "category": "Retail",
+      "upvotes": 2
+    },
+    {
+      "title": "First Bot",
+      "description": "The Bot Search Engine",
+      "image_url": "https://via.placeholder.com/200x100?text=FirstBot",
+      "messenger_url": "https://m.me/100183578449878",
+      "name": "Debdut",
+      "id": "253e2a53-20e9-458a-9b37-a3118ecb5b06",
+      "category": "Ecommerce",
+      "upvotes": 1
+    },
+    {
+      "title": "First Bot",
+      "description": "The Bot Search Engine",
+      "image_url": "https://via.placeholder.com/200x100?text=FirstBot",
+      "messenger_url": "https://m.me/100183578449878",
+      "name": "Debdut",
+      "id": "b105ade6-efae-4265-9d2d-88b0e5147da7",
+      "category": "Retail",
+      "upvotes": 1
+    },
+    {
+      "title": "First Bot",
+      "description": "The Bot Search Engine",
+      "image_url": "https://via.placeholder.com/200x100?text=FirstBot",
+      "messenger_url": "https://m.me/100183578449878",
+      "name": "Debdut",
+      "id": "8f4753ce-53b6-4f75-97d0-6b50bc6dc062",
+      "category": "Finance",
+      "upvotes": 0
+    },
+    {
+      "title": "First Bot",
+      "description": "The Bot Search Engine",
+      "image_url": "https://via.placeholder.com/200x100?text=FirstBot",
+      "messenger_url": "https://m.me/100183578449878",
+      "name": "Debdut",
+      "id": "04cf958e-c600-44f5-a75b-755a9e22995d",
+      "category": "Game",
+      "upvotes": 0
+    }
+  ],
+  "users": [
+    {
+      "first_name": "Debdut",
+      "last_name": "Karmakar",
+      "gender": "male",
+      "locale": "en_GB",
+      "timezone": 5.5,
+      "id": "87874107-9f7d-43a6-846b-8e42043c2479",
+      "profile_pic": "https://platform-lookaside.fbsbx.com/platform/profilepic/?psid=2944225512373450&width=1024&ext=1597718188&hash=AeTSG-li2R103qVE",
+      "messenger_id": "2944225512373450"
+    },
+    {
+      "first_name": "Debdut",
+      "last_name": "Karmakar",
+      "gender": "male",
+      "locale": "en_GB",
+      "timezone": 5.5,
+      "id": "2438590a-1e49-4cfa-9d91-8895077d8a2b",
+      "profile_pic": "https://platform-lookaside.fbsbx.com/platform/profilepic/?psid=2944225512373450&width=1024&ext=1597718254&hash=AeSh6-9nh5t0AHZB",
+      "messenger_id": "2944225512373450"
+    }
+  ],
+  "bot_count": 10,
+  "user_count": 2
 }

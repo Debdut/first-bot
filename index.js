@@ -36,12 +36,18 @@ app.get(config.WEBHOOK, (req, res) => {
 
 app.post(config.WEBHOOK, (req, res) => {
   let body = req.body
+  
   if (body.object === 'page') {
     body.entry.forEach(entry => {
       const webhookEvent = entry.messaging[0]
       const senderId = webhookEvent.sender.id
       if (webhookEvent.message) {
-        Handler.Message(senderId, webhookEvent.message)
+        if (webhookEvent.message.quick_reply) {
+          Handler.Postback(senderId, webhookEvent.message.quick_reply)
+        } else {
+          Handler.Message(senderId, webhookEvent.message)
+        }
+
       } else if (webhookEvent.postback) {
         Handler.Postback(senderId, webhookEvent.postback)
       }
@@ -54,9 +60,14 @@ app.post(config.WEBHOOK, (req, res) => {
   }
 })
 
+app.get('/app-link/:id', (req, res) => {
+  const messenger_id = req.params.id
+  res.redirect(`https://m.me/${messenger_id}`)
+})
+
 app.post('/bot', async (req, res) => {
   let body = req.body
-  let bot = pickCheck(body, ['title', 'description', 'image_url', 'messenger_url'], ['website', 'email', 'name', 'phone'])
+  let bot = pickCheck(body, ['title', 'description', 'image_url', 'messenger_url', 'category'], ['website', 'email', 'name', 'phone'])
   if (bot) {
     bot = new Bot(bot)
     try {
